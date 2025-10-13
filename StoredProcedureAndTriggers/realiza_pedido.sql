@@ -1,6 +1,4 @@
-DELIMITER $$
-
-CREATE PROCEDURE realiza_pedido (
+DELIMITER $ $ CREATE PROCEDURE realiza_pedido (
     IN p_id_cliente INT,
     IN p_id_produto INT,
     IN p_quantidade INT
@@ -33,7 +31,12 @@ SET
     v_id_pedido = LAST_INSERT_ID ();
 
 INSERT INTO
-    ITEM_PEDIDO (id_pedido, id_produto, quantidade, preco_unitario)
+    ITEM_PEDIDO (
+        id_pedido,
+        id_produto,
+        quantidade,
+        preco_unitario
+    )
 VALUES
     (
         v_id_pedido,
@@ -42,7 +45,8 @@ VALUES
         v_preco_unitario
     );
 
-UPDATE PRODUTO
+UPDATE
+    PRODUTO
 SET
     estoque = estoque - p_quantidade
 WHERE
@@ -50,6 +54,4 @@ WHERE
 
 END IF;
 
-END
-
-$$ DELIMITER ;
+END $ $ DELIMITER;

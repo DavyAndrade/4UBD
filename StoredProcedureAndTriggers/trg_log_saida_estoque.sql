@@ -1,7 +1,7 @@
-DELIMITER $$
-
-CREATE TRIGGER trg_log_saida_estoque AFTER
-UPDATE ON PRODUTO FOR EACH ROW BEGIN IF NEW.estoque < OLD.estoque THEN
+DELIMITER $ $ CREATE TRIGGER trg_log_saida_estoque
+AFTER
+UPDATE
+    ON PRODUTO FOR EACH ROW BEGIN IF NEW.estoque < OLD.estoque THEN
 INSERT INTO
     LOG_ESTOQUE (
         id_produto,
@@ -17,6 +17,4 @@ VALUES
 
 END IF;
 
-END
-
-$$ DELIMITER ;
+END $ $ DELIMITER;

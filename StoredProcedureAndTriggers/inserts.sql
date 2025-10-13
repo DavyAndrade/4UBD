@@ -33,38 +33,66 @@ VALUES
 -- Inserts para a tabela ITEM_PEDIDO
 -- Pedido 1 da Ana Souza
 INSERT INTO
-    ITEM_PEDIDO (id_pedido, id_produto, quantidade, preco_unitario)
+    ITEM_PEDIDO (
+        id_pedido,
+        id_produto,
+        quantidade,
+        preco_unitario
+    )
 VALUES
-    (1, 1, 1, 3500.00), -- Notebook
+    (1, 1, 1, 3500.00),
+    -- Notebook
     (1, 3, 2, 250.00);
 
 -- Fones
 -- Pedido 2 do Carlos
 INSERT INTO
-    ITEM_PEDIDO (id_pedido, id_produto, quantidade, preco_unitario)
+    ITEM_PEDIDO (
+        id_pedido,
+        id_produto,
+        quantidade,
+        preco_unitario
+    )
 VALUES
-    (2, 2, 1, 2200.00), -- Smartphone
+    (2, 2, 1, 2200.00),
+    -- Smartphone
     (2, 5, 1, 180.00);
 
 -- Mouse
 -- Pedido 3 da Mariana
 INSERT INTO
-    ITEM_PEDIDO (id_pedido, id_produto, quantidade, preco_unitario)
+    ITEM_PEDIDO (
+        id_pedido,
+        id_produto,
+        quantidade,
+        preco_unitario
+    )
 VALUES
     (3, 7, 1, 1500.00);
 
 -- Cadeira Gamer
 -- Pedido 4 da Ana (outro)
 INSERT INTO
-    ITEM_PEDIDO (id_pedido, id_produto, quantidade, preco_unitario)
+    ITEM_PEDIDO (
+        id_pedido,
+        id_produto,
+        quantidade,
+        preco_unitario
+    )
 VALUES
-    (4, 6, 2, 900.00), -- 2 Monitores
+    (4, 6, 2, 900.00),
+    -- 2 Monitores
     (4, 4, 1, 350.00);
 
 -- Teclado
 -- Pedido 5 da Fernanda
 INSERT INTO
-    ITEM_PEDIDO (id_pedido, id_produto, quantidade, preco_unitario)
+    ITEM_PEDIDO (
+        id_pedido,
+        id_produto,
+        quantidade,
+        preco_unitario
+    )
 VALUES
     (5, 2, 1, 2200.00),
     (5, 5, 2, 180.00);
